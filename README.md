@@ -5,10 +5,10 @@ Request Curls for APIs
 Save Task
 
 curl -X POST \
-  http://localhost:9091/api/store \
+  http://localhost:9091/api/task/create \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: af796267-0caa-0069-5af3-6d77e8ee24c6' \
+  -H 'postman-token: 3ebc9640-ee73-c767-4aff-3703277dcec2' \
   -d '  {
     "channel": null,
     "conversationId": null,
