@@ -2,11 +2,11 @@ package com.demo.data.store.rest;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,8 +18,6 @@ import com.demo.data.store.model.ResponseMessage;
 import com.demo.data.store.model.ResponsesData;
 import com.demo.data.store.model.TaskData;
 import com.demo.data.store.service.StoreService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping(path = "/api")
@@ -30,7 +28,7 @@ public class DataStoreController {
 	@Autowired
 	public StoreService storeService;
 
-	@RequestMapping(value = "/store", method = RequestMethod.POST)
+	@RequestMapping(value = "/task/create", method = RequestMethod.POST)
 	public ResponseEntity<ResponsesData> saveTask(@RequestBody TaskData taskData) {
 
 		LOGGER.info("Input data: {}",taskData);
